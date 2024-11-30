@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title> My Computer Accessories Shop</title>
+
+    <style>
+            body {
+            color: #000;
+            background-color: #fcbfe6;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            background-color: #fcbfe6;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #451637;
+        }
+
+        li {
+            list-style-type: none;
+            float: left;
+        }
+
+        li a {
+            color: rgb(15, 12, 12);
+            display: block;
+            text-align: center;
+            padding: 14px 30px;
+            text-align: none;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(75, 16, 39);
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            background-color: #fcbfe6;
+        }
+
+        button:hover {
+            background-color: rgb(75, 16, 39);
+        }
+
+            input[type=text] {
+                padding: 9px 15px;
+	            width:95%;
+	            border: 1px solid gray; }
+	  
+            input[type=num] {
+                padding: 9px 15px;
+                width:95%;
+                border: 1px solid gray; }
+
+            input[type=address] {
+                padding: 9px 15px;
+                width:95%;
+                border: 1px solid gray; }
+
+            input[type=located] {
+                padding: 9px 15px;
+                width:95%;
+                border: 1px solid gray; }
+	  
+	 
+            .row { border: 2px solid lightgrey ;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                width:45%;
+                height:70%;
+                padding: 20px;
+                margin:auto;
+                background-color:whitesmoke;
+            }
+
+            h2{
+                background-color: rgb(53, 25, 46);
+                color: white;
+                padding: 10px;
+            }
+
+            button { background-color: rgb(53, 25, 46);
+             padding:10px 6%;
+             border :none;
+             color:white;
+             text-align:center;	 }
+    
+    
+    </style>
+
+<table style="width: 100%;">
+    <tr>
+        <td> <img src="Logo.png" width="50" height="50"> </td>
+        <td colspan="3">
+        <div>
+            <ul>
+                <b><li><a href="Home.html"> Home </a></li></b>
+                <b><li><a href="Product.html"> Product</a></li></b>
+                <b><li><a href="#"> Promotion</a></li></b>
+                <b><li><a href="Form.html"> Contact Us</a></li></b>
+            </ul>
+        </div>
+    </td>
+</table>
+<br>
+<div>
+    <form>
+     <div class="row">
+     <center><h2> Contact Us </h2></center>
+      <h4> Name : </h4>
+      <input type="text" id="name" name="uname"><br>
+
+      <h4> Contact Number : </h4>
+      <input type="num" id="num" name="unum"><br>
+
+      <h4> Email Address : </h4>
+      <input type="address" id="address" name="uaddress"><br>
+      
+      <h4>Located : </h4>
+      <input type="located"   id="located" name="ulocated"><br>
+
+      <center><p><button onclick="getName()" type="submit" id="submit" name="usubmit" >Submit</button><p></center>
+     </div>
+    </form>
+    <br>
+  </div>
+    </body>
+</html>

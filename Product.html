@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <title> Product </title>
+    <style>
+      body {
+            color: #000;
+            background-color: #fcbfe6;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            background-color: #fcbfe6;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #451637;
+        }
+
+        h1 {
+            background-color: rgb(53, 25, 46);
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        li {
+            list-style-type: none;
+            float: left;
+        }
+
+        li a {
+            color: rgb(15, 12, 12);
+            display: block;
+            text-align: center;
+            padding: 14px 30px;
+            text-align: none;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(75, 16, 39);
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            background-color: #fcbfe6;
+        }
+
+        p {
+            color: rgb(30, 14, 14);
+            text-align: center;
+            font-weight: bold;
+        }
+
+        s {
+            color: rgb(83, 78, 78);
+        }
+
+        button {
+            background-color: rgb(53, 25, 46);
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(75, 16, 39);
+        }
+
+        .cart-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .cart-container h2 {
+            text-align: center;
+            color: rgb(53, 25, 46);
+        }
+
+        .cart-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .cart-total {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <table style="width: 100%;">
+        <tr>
+            <td> <img src="Logo.png" width="50" height="50"> </td>
+            <td colspan="3">
+            <div>
+                <ul>
+                    <b><li><a href="Home.html"> Home </a></li></b>
+                    <b><li><a href="Product.html"> Product</a></li></b>
+                    <b><li><a href="#"> Promotion</a></li></b>
+                    <b><li><a href="Form.html"> Contact Us</a></li></b>
+                </ul>
+            </div>
+        </td>
+        </tr>
+
+        <tr>
+            <td colspan="4"> <h1>Shop By Categories</h1> </td>
+        </tr>
+    </table>
+
+    <table style="width:100%">
+        <tr>
+            <td>
+                <img src="monitor.png" width="182" height="182">
+                <br>Acer Monitor 24CL1Y 23.8 IPS Monitor<br>
+                <p><s>RM399.00</s>&nbsp;RM299.90</p>
+                Colour :
+                <select name="Colour" id="color1">
+                    <option value="Black" selected>Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product1" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="dekstop.png" width="200" height="200">
+                <br>Acer Dekstop<br>
+                <p><s>RM112.00</s>&nbsp;RM100.90</p>
+                Colour :
+                <select name="Colour" id="color2">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink" selected>Pink</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product2" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="keyboard.png" width="200" height="200">
+                <br>Acer Combo Wireless Keyboard<br>
+                <p><s>RM119.00</s>&nbsp;RM99.00</p>
+                Colour :
+                <select name="Colour" id="color3">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink" selected>Pink</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product3" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="mouse-gaming.png" width="200" height="200">
+                <br>Predator Cestus 327 Gaming Mouse <br>
+                <p><s>RM99.00</s>&nbsp;RM79.90</p>
+                Colour :
+                <select name="Colour" id="color4">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product4" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="acer-usb.png" width="200" height="200">
+                <br>Acer USB Type-C 7 in 1 Mini Dock Silver <br>
+                <p><s>RM99.00</s>&nbsp;RM89.90</p>
+                Colour :
+                <select name="Colour" id="color5">
+                    <option value="silver">Silver</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product5" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="mousepad-acer.png" width="200" height="200">
+                <br>ACER MousePad <br>
+                <p><s>RM29.90</s>&nbsp;RM19.90</p>
+                Colour :
+                <select name="Colour" id="color6">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink" selected>Pink</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product6" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="headset-acer.png" width="200" height="200">
+                <br>Acer Conference Headset Black <br>
+                <p><s>RM89.00</s>&nbsp;RM79.90</p>
+                Colour :
+                <select name="Colour" id="color7">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product7" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="mouse-acer.png" width="200" height="200">
+                <br>Acer Bubble Wireless 2.4G Mouse<br>
+                <p><s>RM59.90</s>&nbsp;RM49.90</p>
+                Colour :
+                <select name="Colour" id="color8">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product8" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+
+            <td><img src="epson-acer.png" width="200" height="200">
+                <br>Epson EcoTank Monochrome M1120 <br>
+                <p><s>RM505.00</s>&nbsp;RM450.90</p>
+                Colour :
+                <select name="Colour" id="color9">
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                </select>
+                <form><br>
+                    <button type="button" data-id="product9" onclick="addToCart(this)">ADD TO CART</button>
+                </form><br>
+            </td>
+        </tr>
+    </table>
+
+    <div class="cart-container">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <div id="total-price" class="cart-total">Total Price: RM0.00</div>
+    </div>
+
+    <center><button onclick="displayDate()">Display Date</button></center>
+    
+    
+    <p id="para"></p>
+
+    <script>
+        let totalPrice = 0;
+
+        function addToCart(button) {
+            alert("You successfully Add to Cart below!");
+            const Accessories = button.getAttribute('data-id');
+            let name, price, color;
+
+            switch (Accessories) {
+                case 'product1':
+                    name = 'Acer Monitor 24CL1Y 23.8 IPS Monitor';
+                    price = 299.90;
+                    color = document.getElementById('color1').value;
+                    break;
+                case 'product2':
+                    name = 'Acer Dekstop';
+                    price = 100.90;
+                    color = document.getElementById('color2').value;
+                    break;
+                case 'product3':
+                    name = 'Acer Combo Wireless Keyboard';
+                    price = 99.00;
+                    color = document.getElementById('color3').value;
+                    break;
+                case 'product4':
+                    name = 'Predator Cestus 327 Gaming Mouse';
+                    price = 79.90;
+                    color = document.getElementById('color4').value;
+                    break;
+                case 'product5':
+                    name = 'Acer USB Type-C 7 in 1 Mini Dock Silver';
+                    price = 89.90;
+                    color = document.getElementById('color5').value;
+                    break;
+                case 'product6':
+                    name = 'ACER MousePad';
+                    price = 19.90;
+                    color = document.getElementById('color6').value;
+                    break;
+                case 'product7':
+                    name = 'Acer Conference Headset Black';
+                    price = 79.90;
+                    color = document.getElementById('color7').value;
+                    break;
+                case 'product8':
+                    name = 'Acer Bubble Wireless 2.4G Mouse';
+                    price = 49.90;
+                    color = document.getElementById('color8').value;
+                    break;
+                case 'product9':
+                    name = 'Epson EcoTank Monochrome M1120';
+                    price = 450.90;
+                    color = document.getElementById('color9').value;
+                    break;
+                default:
+                    console.error('Error');
+                    return;
+            }
+
+            // Add item to cart
+            const cartItems = document.getElementById('cart-items');
+            const item = document.createElement('div');
+            item.classList.add('cart-item');
+            item.innerHTML = `<p>Accessory: ${name}<br>Price: RM${price.toFixed(2)}<br>Color: ${color}</p>`;
+            cartItems.appendChild(item);
+
+            // Update total price
+            totalPrice += price;
+            document.getElementById('total-price').innerText = `Total Price: RM${totalPrice.toFixed(2)}`;
+        }
+
+        function displayDate() {
+            document.getElementById("para").innerHTML = Date();
+        }
+        
+    </script>
+
+    </body>
+</html>
